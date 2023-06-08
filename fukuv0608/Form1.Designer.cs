@@ -37,11 +37,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(376, 216);
+            label1.Location = new Point(382, 221);
             label1.Name = "label1";
-            label1.Size = new Size(38, 15);
+            label1.Size = new Size(19, 15);
             label1.TabIndex = 0;
-            label1.Text = "label1";
+            label1.Text = "○";
             label1.Click += label1_Click;
             // 
             // timer1
@@ -55,9 +55,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(251, 306);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(63, 15);
             label2.TabIndex = 1;
-            label2.Text = "label2";
+            label2.Text = "（＞A＜）";
             label2.Click += label2_Click;
             // 
             // Form1

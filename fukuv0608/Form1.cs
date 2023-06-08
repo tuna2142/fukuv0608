@@ -21,28 +21,28 @@ namespace fukuv0608
         {
             label1.Left += vx;
             label1.Top += vy;
-            //label1.Text = maru;
+            label1.Text = maru;
 
             if (label1.Left <= 0)
             {
                 vx = Math.Abs(vx + (vx / 10));
-                //maru = Form1.ChangeMaru(maru);
+                maru = Form1.ChangeMaru(maru);
 
             }
             if (label1.Right >= ClientSize.Width)
             {
                 vx = -Math.Abs(vx + (vx / 10));
-                //maru = Form1.ChangeMaru(maru);
+                maru = Form1.ChangeMaru(maru);
             }
             if (label1.Top <= 0)
             {
                 vy = Math.Abs(vy + (vy / 10));
-                //maru = Form1.ChangeMaru(maru);
+                maru = Form1.ChangeMaru(maru);
             }
             if (label1.Bottom >= ClientSize.Height)
             {
                 vy = -Math.Abs(vy + (vy / 10));
-                //maru = Form1.ChangeMaru(maru);
+                maru = Form1.ChangeMaru(maru);
             }
 
             //変数mposを宣言して、マウスのフォーム座標を取り出す
@@ -55,7 +55,7 @@ namespace fukuv0608
 
             // ラベルに座標を表示
             ////変換したフォーム座標は、fpos.X、fpos.Yで取り出せる
-            label1.Text = $"{fpos.X} {fpos.Y}";
+            //label1.Text = $"{fpos.X} {fpos.Y}";
 
             // label2.Widthでラベルの幅
             // label2.Heightでラベルの高さ
