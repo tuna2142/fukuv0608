@@ -1,3 +1,5 @@
+using System.Windows.Forms.VisualStyles;
+
 namespace fukuv0608
 {
     public partial class Form1 : Form
@@ -5,10 +7,17 @@ namespace fukuv0608
         int vx = -5;
         int vy = -5;
         string maru = "○";
+        int timerCount = 0;
+        
+        static Random rand = new Random();
+        
 
         public Form1()
         {
             InitializeComponent();
+
+            label1.Left = rand.Next(ClientSize.Width);
+            label1.Top = rand.Next(ClientSize.Height);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -62,6 +71,15 @@ namespace fukuv0608
             // マウスカーソルの位置がlabel2の中央になるようにする
             label2.Left = fpos.X - label2.Width / 2;
             label2.Top = fpos.Y - label2.Height / 2;
+
+            // 当たり判定
+            if ((fpos.X > label1.Left) && (fpos.X < label1.Right) && (fpos.Y > label1.Top) && (fpos.Y < label1.Bottom))
+            {
+                timer1.Enabled = false;
+            }
+
+            timerCount++;
+            label3.Text = timerCount.ToString();
         }
 
         static string ChangeMaru(string a)
@@ -75,6 +93,11 @@ namespace fukuv0608
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
