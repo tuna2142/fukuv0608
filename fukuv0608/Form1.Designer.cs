@@ -36,7 +36,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(362, 214);
+            label1.Location = new Point(376, 216);
             label1.Name = "label1";
             label1.Size = new Size(38, 15);
             label1.TabIndex = 0;
@@ -56,6 +56,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
             Name = "Form1";
+            StartPosition = FormStartPosition.WindowsDefaultBounds;
             Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
